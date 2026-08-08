@@ -185,6 +185,7 @@ class CMapMaker {
                         cMapMaker.updateView(initialCategory).then(() => {     // 初期データロード
                             mapLibre.addCountryFlagsImage(poiCont.getAllOSMCountryCode())
                             article.classList.remove("d-none")
+                            article.style.removeProperty("display")
                             winCont.resizeWindow()
                             winCont.setSidebar(Conf.sideBar.initView).then(() => {
                                 cMapMaker.addEvents()
