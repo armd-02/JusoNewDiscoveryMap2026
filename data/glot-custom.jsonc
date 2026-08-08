@@ -1,0 +1,143 @@
+{
+    "site_title": {
+        "ja": "十三新発見マップ2026 by 淀川アートネット",
+        "en": "Juso New Discovery Map 2026 by Yodogawa Art Net"
+    },
+    "site_subtitle": {
+        "ja": "淀川アートネットのおすすめ施設・店舗",
+        "en": "Recommended facilities and stores on Yodogawa Artnet"
+    },
+    "about": {
+        "ja": "十三新発見マップとは",
+        "en": "about Juso New Discovery Map"
+    },
+    "about_message": {
+        "ja": "淀川アートネットによる十三のオススメスポットが詰まったマップです。詳しくは<a href='https://yodogawaartnet.jimdofree.com/'>公式サイト</a>へ",
+        "en": "A map filled with thirteen recommended spots by YODOGAWA ART-NET."
+    },
+    "owner": {
+        "ja": "プロジェクトのブログ・サイトへ",
+        "en": "About the data being used"
+    },
+    "licence_title": {
+        "ja": "利用しているデータについて",
+        "en": "About the data being used"
+    },
+    "licence_message": {
+        "ja": "このサイトで使われているデータは、OpenStreetMapとプロジェクトのデータを組み合わせています。</a>",
+        "en": "The data used on this site is a combination of OpenStreetMap and project data."
+    },
+    "develop_site": {
+        "ja": "十三新発見マップ2026の開発サイトへ",
+        "en": "Juso New Discovery Map 2026 development site"
+    },
+    "official_site": {
+        "ja": "公式サイト(淀川アートネット)",
+        "en": "Official website(Yodogawa Art Net)"
+    },
+    "more_message": {
+        "ja": "",
+        "en": ""
+    },
+    // listtable.js
+    "listCategory": {
+        "ja": "種類",
+        "en": "Category"
+    },
+    "listName": {
+        "ja": "施設名",
+        "en": "Name"
+    },
+    "listComment": {
+        "ja": "💬 ",
+        "en": "💬 "
+    },
+    "listTitle": {
+        "ja": "店舗・施設リスト",
+        "en": "Store/Facility List"
+    },
+    "activities": {
+        "ja": "活動履歴",
+        "en": "Activities"
+    },
+    "actdate": {
+        "ja": "確認日",
+        "en": "Disaster Date"
+    },
+    "act_title": {
+        "ja": "ひとこと",
+        "en": "Comment"
+    },
+    "act_attention": {
+        "ja": "写真URLにWikimedia Commonsを指定する時は、タイトルを入力してください(例 File:遊具名.jpg)",
+        "en": "When specifying Wikimedia Commons for the photo URL, enter the title (e.g. File: Play equipment name.jpg)"
+    },
+    "act_date": {
+        "ja": "確認日",
+        "en": "Disaster Date"
+    },
+    "act_address": {
+        "ja": "住所",
+        "en": "Address"
+    },
+    "act_genre": {
+        "ja": "ジャンル",
+        "en": "Genre"
+    },
+    "act_keyword": {
+        "ja": "キーワード",
+        "en": "keyword"
+    },
+    "act_memo": {
+        "ja": "💬",
+        "en": "💬"
+    },
+    "act_official_url": {
+        "ja": "公式サイトURL",
+        "en": "Public Site URL"
+    },
+    "act_recommend_url": {
+        "ja": "オススメURL",
+        "en": "Recommend URL"
+    },
+    "act_detail_url": {
+        "ja": "詳細URL",
+        "en": "Detail URL"
+    },
+    "act_picture_url1": {
+        "ja": "写真URL1",
+        "en": "Picture URL1"
+    },
+    "act_picture_url2": {
+        "ja": "写真URL2",
+        "en": "Picture URL2"
+    },
+    "act_picture_url3": {
+        "ja": "写真URL3",
+        "en": "Picture URL3"
+    },
+    "act_picture_url4": {
+        "ja": "写真URL4",
+        "en": "Picture URL4"
+    },
+    "act_picture_url5": {
+        "ja": "写真URL5",
+        "en": "Picture URL5"
+    },
+    "act_picture_url6": {
+        "ja": "写真URL6",
+        "en": "Picture URL6"
+    },
+    "act_picture_url7": {
+        "ja": "写真URL7",
+        "en": "Picture URL7"
+    },
+    "act_picture_url8": {
+        "ja": "写真URL8",
+        "en": "Picture URL8"
+    },
+    "act_license_attention": {
+        "ja": "投稿された情報はオープンデータ(CC0)として公開されます。内緒の情報などは書かないでください。",
+        "en": "The posted information will be published as open data (CC0), so please do not include any confidential information."
+    },
+}

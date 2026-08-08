@@ -1,0 +1,309 @@
+{
+    "osm": {
+        "stores": {
+            "overpass": [
+                "nwr[\"amenity\"]",
+                "nwr[\"shop\"]",
+                "nwr[\"healthcare\"]",
+                "nwr[\"railway\"=\"station\"]",
+                "nwr[\"leisure\"]",
+                "nwr[\"tourism\"]",
+                "nwr[\"craft\"]",
+                "nwr[\"office\"]"
+            ],
+            "tags": [
+                "amenity",
+                "shop",
+                "healthcare",
+                "railway",
+                "leisure",
+                "tourism",
+                "craft",
+                "office"
+            ],
+            "expression": {
+                "poiView": true, // true時はアイコン表示
+                "viewArea": false,
+                "stroke": "#c0c0c0",
+                "stroke-width": 1,
+                "fill-opacity": 0.25
+            }
+        },
+        "十三元今里商店街": {
+            "overpass": [
+                "way[\"landuse\"=\"retail\"][\"name\"=\"十三元今里商店街\"]"
+            ],
+            "tags": [
+                "name=十三元今里商店街"
+            ],
+            "expression": {
+                "poiView": true, // true時はアイコン表示
+                "viewArea": true,
+                "stroke": "#43C8AB",
+                "stroke-width": 1,
+                "fill-opacity": 0.5
+            }
+        },
+        "十三本町商店街": {
+            "overpass": [
+                "way[\"landuse\"=\"retail\"][\"name\"=\"十三本町商店街\"]"
+            ],
+            "tags": [
+                "name=十三本町商店街"
+            ],
+            "expression": {
+                "poiView": false, // true時はアイコン表示
+                "viewArea": true,
+                "stroke": "#FC7FB2",
+                "stroke-width": 1,
+                "fill-opacity": 0.5
+            }
+        },
+        "⼗三フレンドリー商店街": {
+            "overpass": [
+                "way[\"landuse\"=\"retail\"][\"name\"=\"⼗三フレンドリー商店街\"]"
+            ],
+            "tags": [
+                "name=⼗三フレンドリー商店街"
+            ],
+            "expression": {
+                "poiView": false, // true時はアイコン表示
+                "viewArea": true,
+                "stroke": "#FC6221",
+                "stroke-width": 1,
+                "fill-opacity": 0.5
+            }
+        },
+        "⼗三栄⼩町商店会": {
+            "overpass": [
+                "way[\"landuse\"=\"retail\"][\"name\"=\"⼗三栄⼩町商店会\"]"
+            ],
+            "tags": [
+                "name=⼗三栄⼩町商店会"
+            ],
+            "expression": {
+                "poiView": false, // true時はアイコン表示
+                "viewArea": true,
+                "stroke": "#5DD425",
+                "stroke-width": 1,
+                "fill-opacity": 0.5
+            }
+        },
+        "十三西栄町商店会": {
+            "overpass": [
+                "way[\"landuse\"=\"retail\"][\"name\"=\"十三西栄町商店会\"]"
+            ],
+            "tags": [
+                "name=十三西栄町商店会"
+            ],
+            "expression": {
+                "poiView": false, // true時はアイコン表示
+                "viewArea": true,
+                "stroke": "#87FF85",
+                "stroke-width": 1,
+                "fill-opacity": 0.5
+            }
+        },
+        "十三 サカエマチ商店街": {
+            "overpass": [
+                "way[\"landuse\"=\"retail\"][\"name\"=\"十三 サカエマチ商店街\"]"
+            ],
+            "tags": [
+                "name=十三 サカエマチ商店街"
+            ],
+            "expression": {
+                "poiView": false, // true時はアイコン表示
+                "viewArea": true,
+                "stroke": "#FB00CA",
+                "stroke-width": 1,
+                "fill-opacity": 0.5
+            }
+        },
+        "十三一番街商店会": {
+            "overpass": [
+                "way[\"landuse\"=\"retail\"][\"name\"=\"十三一番街商店会\"]"
+            ],
+            "tags": [
+                "name=十三一番街商店会"
+            ],
+            "expression": {
+                "poiView": false, // true時はアイコン表示
+                "viewArea": true,
+                "stroke": "#B836DA",
+                "stroke-width": 1,
+                "fill-opacity": 0.5
+            }
+        },
+        "十三トミータウン商店会": {
+            "overpass": [
+                "way[\"landuse\"=\"retail\"][\"name\"=\"十三トミータウン商店会\"]"
+            ],
+            "tags": [
+                "name=十三トミータウン商店会"
+            ],
+            "expression": {
+                "poiView": false, // true時はアイコン表示
+                "viewArea": true,
+                "stroke": "#3A7AD5",
+                "stroke-width": 1,
+                "fill-opacity": 0.5
+            }
+        },
+        "十三駅前西商店会": {
+            "overpass": [
+                "way[\"landuse\"=\"retail\"][\"name\"=\"十三駅前西商店会\"]"
+            ],
+            "tags": [
+                "name=十三駅前西商店会"
+            ],
+            "expression": {
+                "poiView": false, // true時はアイコン表示
+                "viewArea": true,
+                "stroke": "#26CDFD",
+                "stroke-width": 1,
+                "fill-opacity": 0.5
+            }
+        },
+        "十三駅前通商店街": {
+            "overpass": [
+                "way[\"landuse\"=\"retail\"][\"name\"=\"十三駅前通商店街\"]"
+            ],
+            "tags": [
+                "name=十三駅前通商店街"
+            ],
+            "expression": {
+                "poiView": false, // true時はアイコン表示
+                "viewArea": true,
+                "stroke": "#FF6600",
+                "stroke-width": 1,
+                "fill-opacity": 0.5
+            }
+        },
+        "十三東二仲町商店会": {
+            "overpass": [
+                "way[\"landuse\"=\"retail\"][\"name\"=\"十三東二仲町商店会\"]"
+            ],
+            "tags": [
+                "name=十三東二仲町商店会"
+            ],
+            "expression": {
+                "poiView": false, // true時はアイコン表示
+                "viewArea": true,
+                "stroke": "#FF80B2",
+                "stroke-width": 1,
+                "fill-opacity": 0.5
+            }
+        },
+        "十三東駅前通商店街": {
+            "overpass": [
+                "way[\"landuse\"=\"retail\"][\"name\"=\"十三東駅前通商店街\"]"
+            ],
+            "tags": [
+                "name=十三東駅前通商店街"
+            ],
+            "expression": {
+                "poiView": false, // true時はアイコン表示
+                "viewArea": true,
+                "stroke": "#38C8AB",
+                "stroke-width": 1,
+                "fill-opacity": 0.5
+            }
+        },
+        "十三東三仲町通商店会": {
+            "overpass": [
+                "way[\"landuse\"=\"retail\"][\"name\"=\"十三東三仲町通商店会\"]"
+            ],
+            "tags": [
+                "name=十三東三仲町通商店会"
+            ],
+            "expression": {
+                "poiView": false, // true時はアイコン表示
+                "viewArea": true,
+                "stroke": "#2CD4FE",
+                "stroke-width": 1,
+                "fill-opacity": 0.5
+            }
+        },
+        "十三東本通商店街": {
+            "overpass": [
+                "way[\"landuse\"=\"retail\"][\"name\"=\"十三東本通商店街\"]"
+            ],
+            "tags": [
+                "name=十三東本通商店街"
+            ],
+            "expression": {
+                "poiView": false, // true時はアイコン表示
+                "viewArea": true,
+                "stroke": "#55D400",
+                "stroke-width": 1,
+                "fill-opacity": 0.5
+            }
+        },
+        "木川本町商店街": {
+            "overpass": [
+                "way[\"landuse\"=\"retail\"][\"name\"=\"木川本町商店街\"]"
+            ],
+            "tags": [
+                "name=木川本町商店街"
+            ],
+            "expression": {
+                "poiView": false, // true時はアイコン表示
+                "viewArea": true,
+                "stroke": "#FF00CC",
+                "stroke-width": 1,
+                "fill-opacity": 0.5
+            }
+        },
+        "publicArt": {
+            "overpass": [
+                "nwr[\"tourism\"=\"artwork\"]"
+            ],
+            "tags": [
+                "tourism=artwork"
+            ],
+            "expression": {
+                "poiView": true, // true時はアイコン表示
+                "viewArea": true,
+                "stroke": "#000000",
+                "stroke-width": 4,
+                "fill-opacity": 0.5
+            }
+        },
+        "green_area": {
+            "overpass": [
+                "node[\"natural\"=\"tree\"]",
+                "way[\"natural\"=\"tree_row\"]",
+                "way[\"barrier\"=\"hedge\"]"
+            ],
+            "tags": [
+                "natural=tree",
+                "natural=tree_row",
+                "barrier=hedge"
+            ],
+            "expression": {
+                "poiView": false, // true時はアイコン表示
+                "viewArea": true,
+                "stroke": "#50A050",
+                "stroke-width": 4,
+                "fill-opacity": 0.25
+            }
+        },
+        "bicycle_rental": {
+            "overpass": [
+                "nwr[\"amenity\"=\"bicycle_rental\"]"
+            ],
+            "tags": [
+                "amenity=bicycle_rental"
+            ],
+            "expression": {
+                "poiView": false, // true時はアイコン表示
+                "viewArea": true,
+                "imageIcon": "bicycle_rental.png", // "poiView: false"時のアイコン
+                "imageSize": 0.4,
+                "stroke": "#0000ff",
+                "stroke-width": 4,
+                "fill-opacity": 0.5
+            }
+        }
+    }
+}

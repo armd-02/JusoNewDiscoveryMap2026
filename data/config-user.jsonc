@@ -1,0 +1,252 @@
+// Community Mapmaker User Config
+{
+    "map": {
+        "changeMap": true, // 地図切り替え時はtrue
+        "tileName": "OSMFJ_NOPOI", // タイル一覧は config-system.jsonc へ
+        "viewCenter": [
+            135.481683,
+            34.720456
+        ],
+        "viewPitch": 30,
+        "maxPitch": 75,
+        "_maxBounds": "", // 地図の表示範囲(左下[]、右上[])。未指定時は""
+        "maxBounds": [ // 地図の表示範囲(左下、右上)
+            [
+                135.43,
+                34.66
+            ],
+            [
+                135.55,
+                34.75
+            ]
+        ],
+        "initZoom": 14.5,
+        "maxZoom": 23,
+        "detailZoom": 17.5, // モーダルダイアログ表示時のズームサイズ
+        "textFont": [
+            "Noto Sans Bold"
+        ], // 使用可能なフォント（spriteに依存）
+        "textSize": 12,
+        "polygonMarker": { // ポリゴン設定
+            "fill-color": "#CC6666",
+            "fill-opacity": 0.3
+        }
+    },
+    "minimap": { // 地球儀表示時の初期設定
+        "use": false, // 地球儀利用時はtrue
+        "height": 200,
+        "initZoom": 2,
+        "viewCenter": [
+            135,
+            34
+        ]
+    },
+    "icon": {
+        "fgPath": "icon",
+        "bgPath": "image",
+        "shadow": 0.7,
+        "attention": 0.8,
+        "green": 0.6,
+        "middle": 0.8,
+        "visited": 0.4,
+        "normal": 0.8,
+        "flag": 0.5,
+        "textFont": [
+            "Noto Sans Regular"
+        ], // 使用可能なフォント（spriteに依存）
+        "textSize": 12,
+        "textViewZoom": 14 // アイコンに文字を表示するズームレベル
+    },
+    "poiView": {
+        "poiActLoad": true, // 起動時にActivityを読み込むか
+        "poiZoom": {
+            // アイコンの前後位置は後ろの方が手前になる
+            "stores": 14,
+            "十三元今里商店街": 13,
+            "十三本町商店街": 13,
+            "⼗三フレンドリー商店街": 13,
+            "⼗三栄⼩町商店会": 13,
+            "十三西栄町商店会": 13,
+            "十三 サカエマチ商店街": 13,
+            "十三一番街商店会": 13,
+            "十三トミータウン商店会": 13,
+            "十三駅前西商店会": 13,
+            "十三駅前通商店街": 13,
+            "十三東二仲町商店会": 13,
+            "十三東駅前通商店街": 13,
+            "十三東三仲町通商店会": 13,
+            "十三東本通商店街": 13,
+            "木川本町商店街": 13,
+            "bicycle_rental": 15,
+            "publicArt": 13,
+            "green_area": 13
+        },
+        "editZoom": {
+            // 編集時に追加するpoiZoom
+            "JusoNewDiscovery": 16
+        }
+    },
+    "selectItem": { // 選択リストの内容を手動記載 / 空の時は "" とする
+        "default": "",
+        "menu": "",
+        "action": "ChangePoi" // ChangeMap:背景地図切り替え / ChangePoi:メニューに会ったOverpass名のPOIを表示 / "":google Spreadseedのcategory
+    },
+    "sideBar": {
+        "everyView": true, // すべてのビューでサイドバーを表示するか
+        "initView": "view" // 空は非表示 / view:表示 / change:表示と拡大の切り替え / mini:縦の時はタイトルのみ表示。横の時は非表示 / list:リスト表示
+    },
+    "listTable": {
+        "backgroundImage": "./image/bgimage.png",
+        "category": "activity", // カテゴリ選択 / activity:アクティビティリスト / tags:タグ / menu: タグベースの手動カテゴリ
+        "target": "activity", // targets:指定したtargetだけ表示 / activity:google sheetsのデータのみ表示 // 空:両方表示
+        "allActs": true, // true: 全てのactivityを常に表示 / false: 画面内のActivityのみ表示
+        "playback": {
+            "view": false,
+            "zoomLevel": 15,
+            "timer": 4000
+        },
+        "download": false,
+        "csvColumn": [ // ダウンロードするCSVの項目
+            "id",
+            "categoryJa",
+            "name",
+            "parentName",
+            "tag",
+            "categoryData",
+            "iconFile",
+            "lng",
+            "lat"
+        ]
+    },
+    "thumbnail": {
+        "use": true,
+        "limits": 99, // 画像の制限数
+        "slideThumbWidth": "320",
+        "modalThumbWidth": "800"
+    },
+    "google": {
+        "AppScript": "https://script.google.com/macros/s/AKfycbyNPgIuPl0Z9h7tixeIUqCupMUoOCWKX9s7JkOGJkFmSCGqr7iKxGbNIPnOva03GQUM/exec",
+        "targetName": "activity"
+    },
+    "static": {
+        "use": true, // true:静的データを利用する / false:OverpassAPIを利用する
+        "osmjsons": [
+            "./data/stores.json",
+            "./data/retails.json",
+            "./data/naturual.json",
+            "./data/bicycle.json"
+        ]
+    },
+    "wikipedia": {
+        "marker": "wikipedia.svg",
+        "api_": "wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cimages&exintro=&explaintext=&titles=",
+        "api": "wikipedia.org/api/rest_v1/page/summary/",
+        "domain": "wikipedia.org",
+        "tag": "wikipedia"
+    },
+    "etc": {
+        "localSave": "", // 訪問済み機能フラグ(有効時はアプリ名、無効時は"")
+        "reverseIcon": false, // true:訪問済みを目立たせる / false:訪問済みを目立たせない
+        "editMode": false, // 編集メニューの表示/非表示
+        "splashUrl": "./image/ogimage.png",
+        "loadingUrl": "./image/loading.gif"
+    },
+    "menu": {
+        "main": [
+            // トップメニュー一覧
+            {
+                "glot-model": "about",
+                "linkto": "javascript:cMapMaker.about()",
+                "divider": false
+            },
+            {
+                "glot-model": "licence_title",
+                "linkto": "javascript:cMapMaker.licence()",
+                "divider": false
+            },
+            {
+                "glot-model": "official_site",
+                "linkto": "https://mikuni-artfes.studio.site/",
+                "divider": false
+            },
+            {
+                "glot-model": "openstreetmap",
+                "linkto": "https://www.openstreetmap.org/about",
+                "divider": false
+            }
+            /*
+            {
+                "glot-model": "UseOVCacheYes",
+                "linkto": "javascript:cMapMaker.setCacheMode(true)",
+                "divider": false
+            },
+            {
+                "glot-model": "UseOVCacheNo",
+                "linkto": "javascript:cMapMaker.setCacheMode(false)",
+                "divider": false
+            }
+            */
+        ],
+        "mainSystem": [
+            /*
+            {
+                "glot-model": "export_visited",
+                "linkto": "javascript:poiStatusCont.export()",
+                "divider": false
+            },
+            {
+                "glot-model": "import_visited",
+                "linkto": "javascript:poiStatusCont.import()",
+                "divider": false
+            }
+                */
+        ],
+        // 詳細表示のハンバーガーメニュー
+        "modal": [
+            /*
+            {
+                "glot-model": "act_add",
+                "linkto": "javascript:modalActs.edit({form:'Playgrounds'})",
+                "divider": false
+            },
+            */
+            {
+                "glot-model": "copyShareLink",
+                "linkto": "javascript:cMapMaker.shareURL()",
+                "divider": false
+            },
+            {
+                "glot-model": "osm_open",
+                "linkto": "javascript:winCont.osm_open(cMapMaker.openOSMid)",
+                "divider": false
+            }
+        ],
+        // 詳細モーダルの追加ボタン
+        "activities": [
+            /*
+            {
+                "btn_class": "btn btn-light btn-lg border-secondary w-50 m-2 p-1",
+                "code": "modalActs.edit({form:'Playgrounds'})",
+                "icon_class": "fas fa-clone",
+                "btn_glot_name": "act_add"
+            }
+            */
+        ],
+        "editActivity": [
+            {
+                "btn_class": "btn btn-light btn-lg border-secondary w-50 m-2 p-1",
+                "code": "javascript:modalActs.save()",
+                "icon_class": "fa-solid fa-cloud-arrow-up",
+                "btn_glot_name": "act_save"
+            }
+        ],
+        "visited": [
+            {
+                "btn_class": "btn btn-light border-secondary pe-auto",
+                "code": "javascript:poiStatusCont.import_load()",
+                "icon_class": "fa-solid fa-cloud-arrow-up",
+                "btn_glot_name": "act_upload"
+            }
+        ]
+    }
+}
