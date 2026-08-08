@@ -793,6 +793,10 @@ class CMapMaker {
     eventChangeCategory() {
         let catname, selcategory = listTable.getSelCategory()
         console.log("eventChange: " + selcategory)
+        const listAccordion = document.getElementById("listAccordion")
+        if (listAccordion && !listAccordion.classList.contains("show")) {
+            basic.openAccordion("listAccordion")
+        }
         switch (Conf.selectItem.action) {
             case "ChangeMap":                               // 背景地図切り替え
                 mapLibre.changeMap(list_category.value)
@@ -803,10 +807,9 @@ class CMapMaker {
         }
         catname = selcategory !== "-" ? `?category=${selcategory}` : ""
         history.replaceState('', '', location.pathname + catname + location.hash)
-        cMapMaker.clearDatail().then(() => {
-            geoCont.writePoiCircle()
-            mapLibre.map.redraw()
-        })
+        cMapMaker.clearDatail()
+        geoCont.writePoiCircle()
+        mapLibre.map.redraw()
 
     }
 

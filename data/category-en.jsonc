@@ -237,7 +237,8 @@
             "hospice": "hospice"
         },
         "club": {
-            "sport": "sports club"
+            "sport": "sports club",
+            "yes": "club"
         },
         "crossing": {
             "informal": "informal crossing",

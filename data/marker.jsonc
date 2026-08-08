@@ -254,7 +254,8 @@
                 "hospice": "social_facility.png"
             },
             "club": {
-                "sport": "gym.png"
+                "sport": "gym.png",
+                "yes": "users-solid.png"
             },
             "crossing": {
                 "informal": "pedestrian.png",

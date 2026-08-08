@@ -4,6 +4,7 @@
             "overpass": [
                 "nwr[\"amenity\"]",
                 "nwr[\"shop\"]",
+                "nwr[\"club\"]",
                 "nwr[\"healthcare\"]",
                 "nwr[\"railway\"=\"station\"]",
                 "nwr[\"leisure\"]",
@@ -13,6 +14,7 @@
             ],
             "tags": [
                 "amenity",
+                "club",
                 "shop",
                 "healthcare",
                 "railway",

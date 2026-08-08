@@ -251,7 +251,8 @@
             "hospice": "ホスピス"
         },
         "club": {
-            "sport": "スポーツクラブ"
+            "sport": "スポーツクラブ",
+            "yes": "クラブ"
         },
         "crossing": {
             "informal": "非公式横断箇所",
