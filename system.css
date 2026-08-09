@@ -43,6 +43,7 @@ a {
 
 .two-pane {
     display: flex;
+    position: relative;
 }
 
 #top-pane {
@@ -55,6 +56,12 @@ a {
     box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     background-image: var(--bg-url, none);
+}
+
+body.is-resizing-sidebar,
+body.is-resizing-sidebar * {
+    cursor: inherit !important;
+    user-select: none !important;
 }
 
 .footerSpace {
