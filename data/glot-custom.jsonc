@@ -136,8 +136,12 @@
         "ja": "写真URL8",
         "en": "Picture URL8"
     },
+    "act_video_url1": {
+        "ja": "動画URL1",
+        "en": "Video URL1"
+    },
     "act_license_attention": {
         "ja": "投稿された情報はオープンデータ(CC0)として公開されます。内緒の情報などは書かないでください。",
         "en": "The posted information will be published as open data (CC0), so please do not include any confidential information."
-    },
+    }
 }

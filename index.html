@@ -33,6 +33,7 @@
                 <div id="mapid"><canvas id="snow"></canvas></div>
             </main>
             <aside id="bottom-pane" class="row m-0">
+                <div id="sidebarResizeHandle" title="ドラッグしてサイズ変更" aria-label="ドラッグしてリストのサイズを変更"></div>
                 <div id="btmHeader" class="accordion p-2 h-100">
 
                     <!-- Detail -->
@@ -140,12 +141,15 @@
         </div>
     </div>
 
-    <div id="PinchImageBK" onclick="modalActs.pinchImage(false)">
+    <div id="PinchImageBK" onclick="modalActs.closeMedia()">
         <div class="d-flex align-items-center justify-content-center h-100">
             <div class="spinner-border text-primary" id="image_spinner"></div>
         </div>
     </div>
-    <img id="PinchImage" onclick="modalActs.pinchImage(false)"></img>
+    <img id="PinchImage" draggable="false" onclick="modalActs.toggleImageSize(this, event)"></img>
+    <button type="button" id="PinchImageClose" aria-label="画像を閉じる" title="閉じる" onclick="event.stopPropagation(); modalActs.closeMedia()">✕</button>
+    <video id="FullScreenVideo" playsinline onclick="modalActs.toggleVideo(this)"></video>
+    <button type="button" id="FullScreenVideoClose" aria-label="動画を閉じる" title="閉じる" onclick="event.stopPropagation(); modalActs.closeMedia()">✕</button>
 
     <div id="scrollHand" class="d-flex justify-content-center d-none">
         <img src="./image/hand-pointer-solid.svg" width="42px">

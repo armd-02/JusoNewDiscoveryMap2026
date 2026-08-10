@@ -79,7 +79,25 @@ class CMapMaker {
             "./data/overpass-system.jsonc", `./data/overpass-custom.jsonc`,
             `./data/glot-custom.jsonc`, `./data/glot-system.jsonc`,
         ];
-        const fetchUrls = FILES.map((url) => fetch(url).then((res) => res.text()));
+        const fetchText = async (url, maxAttempts = 3) => {
+            let lastError;
+            for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+                try {
+                    const response = await fetch(url);
+                    if (!response.ok) {
+                        throw new Error(`HTTP ${response.status} ${response.statusText}`);
+                    }
+                    return await response.text();
+                } catch (error) {
+                    lastError = error;
+                    if (attempt < maxAttempts) {
+                        await new Promise(resolve => setTimeout(resolve, attempt * 250));
+                    }
+                }
+            }
+            throw new Error(`Failed to load ${url}: ${lastError?.message ?? "Unknown fetch error"}`);
+        };
+        const fetchUrls = FILES.map(url => fetchText(url));
         const setUrlParams = function () {  // URLから引数を取得して返す関数
             let keyValue = {};
             let search = location.search.replace(/[?&]fbclid.*/, "").replace(/%2F/g, "/").slice(1); // facebook対策
@@ -160,6 +178,7 @@ class CMapMaker {
                     const mergedMenu = [...Conf.menu.main, ...Conf.menu.mainSystem];
                     winCont.menu_make(mergedMenu, "main_menu");
                     winCont.mouseDragScroll(images, cMapMaker.eventViewThumb); // set Drag Scroll on images
+                    winCont.initSidebarResize();
                     glot.render()
                     list_keyword.setAttribute("placeholder", glot.get("searchKeyword"));
                     listTitle.innerHTML = glot.get("listTitle");
@@ -267,6 +286,7 @@ class CMapMaker {
 
                         poiCont.setActlnglat();
                         await cMapMaker.updateView(initialCategory);
+                        if (cMapMaker.openOSMid) await cMapMaker.viewDetail(cMapMaker.openOSMid);
                         if (!Conf.static.use) mapLibre.addCountryFlagsImage(poiCont.getAllOSMCountryCode());
                         console.log("initialize: Deferred activity data loaded.");
                     }).catch((error) => {
@@ -288,6 +308,11 @@ class CMapMaker {
         mapLibre.on('moveend', this.eventMoveMap.bind(cMapMaker))   		// マップ移動時の処理
         mapLibre.on('zoomend', this.eventZoomMap.bind(cMapMaker))			// ズーム終了時に表示更新
         list_category.addEventListener('change', this.eventChangeCategory.bind(cMapMaker))	// category change
+        list_keyword.addEventListener('keydown', (event) => {
+            if (event.key !== 'Enter') return;
+            event.preventDefault();
+            cMapMaker.searchKeyword(list_keyword.value);
+        });
     }
 
     // about Map
@@ -613,7 +638,7 @@ class CMapMaker {
                     cMapMaker.changeMode("map")
                     this.detail = true
                     this.openOSMid = osmid
-                    const element = document.getElementById('bottom-pane');
+                    const element = document.getElementById('btmHeader');
                     element.scrollTo({ top: 0, behavior: 'smooth' });
                     resolve()
                 })
@@ -791,6 +816,7 @@ class CMapMaker {
 
     // EVENT: カテゴリ変更時のイベント
     eventChangeCategory() {
+        list_keyword.value = "";
         let catname, selcategory = listTable.getSelCategory()
         console.log("eventChange: " + selcategory)
         const listAccordion = document.getElementById("listAccordion")

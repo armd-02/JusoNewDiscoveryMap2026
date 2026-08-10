@@ -51,11 +51,97 @@ a {
 }
 
 #bottom-pane {
+    position: relative;
     background-color: #faf8f8;
-    overflow: auto;
+    overflow: hidden;
     box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     background-image: var(--bg-url, none);
+}
+
+#btmHeader {
+    width: 100%;
+    overflow-y: auto;
+}
+
+#sidebarResizeHandle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 12px;
+    height: 100%;
+    padding: 0;
+    z-index: 1001;
+    cursor: col-resize;
+    touch-action: none;
+}
+
+#sidebarResizeHandle::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 12px;
+    height: 56px;
+    transform: translateY(-50%);
+    border: 1px solid #adb5bd;
+    border-left: 0;
+    border-radius: 0 8px 8px 0;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+#sidebarResizeHandle::after {
+    content: "⋮";
+    position: absolute;
+    top: 50%;
+    left: 1px;
+    width: 10px;
+    transform: translateY(-52%);
+    color: #495057;
+    font-size: 22px;
+    line-height: 1;
+    text-align: center;
+}
+
+#sidebarResizeHandle:hover::before,
+body.is-resizing-sidebar #sidebarResizeHandle::before {
+    border-color: rgb(0, 117, 58);
+    background: rgb(224, 243, 233);
+}
+
+#sidebarResizeHandle:hover::after,
+body.is-resizing-sidebar #sidebarResizeHandle::after {
+    color: rgb(0, 117, 58);
+}
+
+@media (max-width: 1079.98px) {
+    #sidebarResizeHandle {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 12px;
+        cursor: row-resize;
+    }
+
+    #sidebarResizeHandle::before {
+        top: 0;
+        left: 50%;
+        width: 56px;
+        height: 12px;
+        transform: translateX(-50%);
+        border: 1px solid #adb5bd;
+        border-top: 0;
+        border-radius: 0 0 8px 8px;
+    }
+
+    #sidebarResizeHandle::after {
+        content: "⋯";
+        top: -8px;
+        left: 50%;
+        width: 40px;
+        transform: translateX(-50%);
+    }
 }
 
 body.is-resizing-sidebar,
@@ -264,16 +350,61 @@ tr.selected td {
     position: fixed;
     z-index: 10000;
     cursor: zoom-out;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 #PinchImageBK {
     display: none;
+    position: fixed;
     width: 100vw;
     height: 100vh;
     z-index: 9999;
     background-color: #000000A0;
     top: 0px;
     left: 0px;
+}
+
+#FullScreenVideo {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    max-width: calc(100vw - 24px);
+    max-height: calc(100vh - 24px);
+    width: auto;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000;
+    cursor: pointer;
+}
+
+#PinchImageClose,
+#FullScreenVideoClose {
+    display: none;
+    position: fixed;
+    z-index: 10001;
+    top: 16px;
+    right: 16px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.72);
+    color: #fff;
+    font-size: 24px;
+    line-height: 42px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#PinchImageClose:hover,
+#PinchImageClose:focus-visible,
+#FullScreenVideoClose:hover,
+#FullScreenVideoClose:focus-visible {
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 #scrollHand {

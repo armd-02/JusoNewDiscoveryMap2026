@@ -55,7 +55,16 @@
             "Noto Sans Regular"
         ], // 使用可能なフォント（spriteに依存）
         "textSize": 12,
-        "textViewZoom": 14 // アイコンに文字を表示するズームレベル
+        "textViewZoom": 14, // アイコンに文字を表示するズームレベル
+        "markerColors": {
+            "hover": { "stroke": "#e9a05b" },
+            //"attention": { "fill": "#ffffff", "stroke": "#ffc786" },
+            "attention": { "fill": "#ffffff", "stroke": "#888888" }, // attentionしか無いのでnormalと同じ色にする
+            "green": { "fill": "#ffffff", "stroke": "#51b3a1" },
+            "middle": { "fill": "#ffffff", "stroke": "#4d77ac" },
+            "normal": { "fill": "#ffffff", "stroke": "#bfbfe1" },
+            "visited": { "fill": "#ffffff", "stroke": "#9c9c9c" }
+        }
     },
     "poiView": {
         "poiActLoad": true, // 起動時にActivityを読み込むか
