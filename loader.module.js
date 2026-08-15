@@ -14,8 +14,7 @@
         scripts = [],
         scriptGroups = [],
         lazyScriptGroups = {},
-        gId = "",
-        gaCookieDomain = ""
+        gId = ""
     } = manifest;
 
     const trimNonEmpty = (items) =>
@@ -115,12 +114,7 @@
         };
 
         window.gtag("js", new Date());
-
-        const gaConfig = {};
-        if (gaCookieDomain) {
-            gaConfig.cookie_domain = gaCookieDomain;
-        }
-        window.gtag("config", gId, gaConfig);
+        window.gtag("config", gId);
 
         loadScript(`https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(gId)}`, {
             ordered: false
