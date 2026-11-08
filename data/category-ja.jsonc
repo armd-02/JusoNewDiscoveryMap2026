@@ -591,7 +591,7 @@
             "railway_car": "保存鉄道車両",
             "ruins": "廃墟",
             "street_lamp": "照明（保存）",
-            "stone": "歴史的な岩/石",
+            "stone": "歴史的な石",
             "tomb": "墓",
             "wayside_shrine": "地蔵・道祖神",
             "wayside_cross": "十字架",
@@ -601,7 +601,7 @@
             "mine_shaft": "立坑跡",
             "city_gate": "城門",
             "fort": "要塞",
-            "manor": "歴史的邸宅",
+            "manor": "邸宅",
             "wreck": "難破船"
         },
         "marker": {

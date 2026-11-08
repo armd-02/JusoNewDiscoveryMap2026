@@ -1,5 +1,6 @@
 // Community Mapmaker User Config
 {
+    "mapDisplayStatus": { "use": false },
     "map": {
         "changeMap": true, // 地図切り替え時はtrue
         "tileName": "OSMFJ_NOPOI", // タイル一覧は config-system.jsonc へ
@@ -86,7 +87,7 @@
             "十三東三仲町通商店会": 13,
             "十三東本通商店街": 13,
             "木川本町商店街": 13,
-            "bicycle_rental": 15,
+            "bicycle_rental": 16,
             "publicArt": 13,
             "green_area": 13
         },
